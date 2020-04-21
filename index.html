@@ -3,11 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <title>Formula</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=0"
+    />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
     <script src="script.js"></script>
   </head>
   <body>
@@ -17,10 +28,15 @@
         <div class="content">
           <div>
             <h1 class="title">
-              <a href="https://github.com/hikariyamasaki/markdown_Formula" target="_blank" style="text-decoration: none;">
-              <i class="fab fa-github-square" style="color: black;"></i>
+              <a
+                href="https://github.com/hikariyamasaki/markdown_Formula"
+                target="_blank"
+                style="text-decoration: none;"
+              >
+                <i class="fab fa-github-square" style="color: black;"></i>
               </a>
-              Formula</h1>
+              Formula
+            </h1>
           </div>
           <div class="code">
             <form id="inputform">
@@ -29,26 +45,27 @@
           </div>
           <div class="code-format">
             <form name="source">
-                <select name="source">
-                  <option value="qiita">Qiita</option>
-                  <option value="kibela">Kibela</option>
-                  <!-- <option value="hatena">はてなブログ</option> -->
-                </select>
-              </form>
-              <p><img src="./svg/trending_flat.svg" class="icon-autorenew"></p>
-              <form name="target">
-                <select name="target">
-                  <option value="qiita">Qiita</option>
-                  <option value="kibela">Kibela</option>
-                  <option value="hatena">はてなブログ</option>
-                </select>
-              </form>
-              <button id="change" onclick="transform_text()">変換</button>
+              <select name="source">
+                <!-- <option value="qiita">Qiita</option>
+                <option value="kibela">Kibela</option> -->
+                <option value="kibelaDollar">Kibela（$$使用）</option>
+                <!-- <option value="hatena">はてなブログ</option> -->
+              </select>
+            </form>
+            <p><img src="./svg/trending_flat.svg" class="icon-autorenew" /></p>
+            <form name="target">
+              <select name="target">
+                <!-- <option value="qiita">Qiita</option>
+                <option value="kibela">Kibela</option> -->
+                <option value="hatena">はてなブログ</option>
+              </select>
+            </form>
+            <button id="change" onclick="transform_text()">変換</button>
           </div>
           <div class="code">
-              <form id="outputform">
-                <textarea id="output"></textarea>
-              </form>
+            <form id="outputform">
+              <textarea id="output"></textarea>
+            </form>
           </div>
         </div>
         <div class="side">
@@ -57,13 +74,18 @@
             <div class="type">
               <p class="type-qiita">Qiita</p>
               <div>
-                <p class="type-independent-format"><img src="./svg/format_quote.svg" class="type-independent-format-icon">独立段落</p>
+                <p class="type-independent-format">
+                  <img
+                    src="./svg/format_quote.svg"
+                    class="type-independent-format-icon"
+                  />独立段落
+                </p>
                 <p class="format">
-                ```math<br/>
-                <br/>
-                hogehoge<br/>
-                <br/>
-                ```
+                  ```math<br />
+                  <br />
+                  hogehoge<br />
+                  <br />
+                  ```
                 </p>
                 <p class="format-or">or</p>
                 <div class="inline-format">
@@ -72,7 +94,12 @@
                 </div>
               </div>
               <div>
-                <p class="type-independent-format"><img src="./svg/format_quote.svg" class="type-independent-format-icon">インライン数式</p>
+                <p class="type-independent-format">
+                  <img
+                    src="./svg/format_quote.svg"
+                    class="type-independent-format-icon"
+                  />インライン数式
+                </p>
                 <div class="inline-format">
                   <p class="format format-coming-soon">$hogehoge$</p>
                   <p class="inline-format-yet">未対応</p>
@@ -82,17 +109,27 @@
             <div class="type">
               <p class="type-kibela">Kibela</p>
               <div>
-                <p class="type-independent-format"><img src="./svg/format_quote.svg" class="type-independent-format-icon">独立段落</p>
+                <p class="type-independent-format">
+                  <img
+                    src="./svg/format_quote.svg"
+                    class="type-independent-format-icon"
+                  />独立段落
+                </p>
                 <p class="format">
-                ~~~{latex}<br/>
-                <br/>
-                hogehoge<br/>
-                <br/>
-                ~~~
+                  ~~~{latex}<br />
+                  <br />
+                  hogehoge<br />
+                  <br />
+                  ~~~
                 </p>
               </div>
               <div>
-                <p class="type-independent-format"><img src="./svg/format_quote.svg" class="type-independent-format-icon">インライン数式</p>
+                <p class="type-independent-format">
+                  <img
+                    src="./svg/format_quote.svg"
+                    class="type-independent-format-icon"
+                  />インライン数式
+                </p>
                 <div class="inline-format">
                   <p class="format format-coming-soon">$`hogehoge`$</p>
                   <p class="inline-format-yet">未対応</p>
@@ -102,18 +139,30 @@
             <div class="type">
               <p class="type-hatena">はてなブログ</p>
               <div>
-                <p class="type-independent-format"><img src="./svg/format_quote.svg" class="type-independent-format-icon">独立段落</p>
-<pre class="format">
+                <p class="type-independent-format">
+                  <img
+                    src="./svg/format_quote.svg"
+                    class="type-independent-format-icon"
+                  />独立段落
+                </p>
+                <pre class="format">
 &lt;p style="display: none;"&gt;<br/>
   [tex: hogehoge]
 &lt;/p&gt;
 </pre>
               </div>
               <div>
-                <p class="type-independent-format"><img src="./svg/format_quote.svg" class="type-independent-format-icon">インライン数式</p>
+                <p class="type-independent-format">
+                  <img
+                    src="./svg/format_quote.svg"
+                    class="type-independent-format-icon"
+                  />インライン数式
+                </p>
                 <div class="inline-format">
-<pre class="format format-coming-soon">&lt;p&gt;[tex: hogehoge]&lt;/p&gt;</pre>
-<p class="inline-format-yet">未対応</p>
+                  <pre class="format format-coming-soon">
+&lt;p&gt;[tex: hogehoge]&lt;/p&gt;</pre
+                  >
+                  <p class="inline-format-yet">未対応</p>
                 </div>
               </div>
             </div>
